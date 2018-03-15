@@ -1,0 +1,24 @@
+body > img {
+	width : 200px;
+	height : 200px;
+	position : absolute;
+	top : 20px;
+	left : 20px;
+}
+
+header {
+	padding: 40px 0;
+}
+
+header button {
+	float: right;
+	width: 60px;
+}
+
+button.B1 {
+	border : solid 1px white;
+	background-color: #296CD5;
+	padding: 5px 0;
+	font-family: Arial;
+	text-align: center;
+}

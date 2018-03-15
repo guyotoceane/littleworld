@@ -1,0 +1,32 @@
+{
+  "name": "littleworld",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-rename": "latest",
+    "gulp-csso": "latest",
+    "gulp-less": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-cssbeautify": "latest",
+    "gulp-autoprefixer": "latest"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kioup/littleworld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kioup/littleworld/issues"
+  },
+  "homepage": "https://github.com/Kioup/littleworld#readme",
+  "dependencies": {
+    "gulp-load-plugins": "^1.5.0"
+  }
+}

@@ -1,0 +1,151 @@
+@button : #296CD5;
+@sea : #A1E5F8;
+
+@fiche: #296CD5; 
+@livre: #FF9D00;
+@bibliotheque : #BD00FF;
+@sortie: #00B800;
+
+/* arrière plan et contexte */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	min-height: 100%;
+
+}
+
+main {
+	background-color: @sea;
+	background-image: url(../images/colorful-1974699_1920.png);
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	min-height: 100vh;
+	height: 100%;
+}
+
+/* en-tête */
+
+header {
+	padding: 20px 0;
+	position: relative;
+
+	.masque {
+		top : -80px;
+		left : -50px;
+		width: 300px;
+		height: 300px;
+		opacity: 0.5;
+		background-color: white;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 0;
+		display: inline-block;
+	}
+
+	.logo {
+		position : relative;
+		top : 10px;
+		left : 10px;
+		width : 200px;
+		display: inline-block;
+
+		img {
+			width: 100%;
+			position: absolute;
+			z-index: 0;
+		}
+
+		h1 {
+			font-family: Arial;
+			color: black;
+			z-index: 1;
+			position: relative;
+		}
+
+	}
+
+	button {
+		float: right;
+		width: 140px;
+		margin-right: 20px;
+	}
+
+	button.B1 {
+	border : solid 1px white;
+	border-radius: 20px;
+	color: white;
+	background-color: @button;
+	padding: 2px 0;
+	font-family: Arial;
+	text-align: center;
+	box-shadow: 10px 8px 8px #000000b3;
+	}
+
+}
+
+/* section principale */
+
+section {
+
+	padding: 0 50px;
+	height: auto;
+	min-height: 60%;
+	position: relative;
+
+	div.menu {
+
+		position: relative;
+		justify-content: flex-end;
+		display: flex;
+
+		ul {
+			display: flex;
+			justify-content: flex-end;
+			width: 80%;
+			margin: 0;
+
+			li {
+				display:inline-block;
+				flex-grow: 1;
+
+				a {
+					text-decoration: none;
+					color: white;
+					width: 100%;
+					text-align: center;
+					display: inline-block;
+				}
+			}
+
+			li.fiche {
+				background-color: @fiche;
+			}
+
+			li.livre {
+				background-color: @livre;
+			}
+
+			li.bibliotheque {
+				background-color: @bibliotheque;
+			}
+
+			li.sortie {
+				background-color: @sortie;
+			}
+
+		}
+	}
+
+	div.onglet {
+		background-color: @bibliotheque;
+		min-height: 80%;
+
+		h2 {
+			margin: 0 auto;
+		}
+	}
+}
