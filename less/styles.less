@@ -76,19 +76,24 @@ header {
 		margin-right: 20px;
 	}
 
-	button.B1 {
-	border : solid 1px white;
-	border-radius: 20px;
-	color: white;
-	background-color: @button;
-	padding: 2px 0;
-	font-family: Arial;
-	text-align: center;
-	box-shadow: 10px 8px 8px @box-shadow;
-	}
 
 }
 
+button.B1 {
+border : solid 1px white;
+border-radius: 20px;
+color: white;
+background-color: @button;
+padding: 2px 0;
+font-family: Arial;
+text-align: center;
+box-shadow: 10px 8px 8px @box-shadow;
+width: 140px;
+}
+
+div.center {
+	text-align: center;
+}
 /* section principale */
 
 section {
@@ -184,6 +189,37 @@ section {
 				width: 150px;
 				display: inline-block;
 
+			}
+
+			div.slider {
+				height: 120px;
+				width: 60%;
+				margin: 40px auto;
+				background-color: white;
+
+				ul {
+					display: flex;
+					justify-content: space-around;
+					height: 100%;
+					padding: 0;
+					li {
+						display: inline-block;
+						height: 100%;
+						img {
+							height: 100%;
+						}
+						img:hover {
+							transition: 1s;
+							opacity: 0.6;
+							border: solid 2px black;
+						}
+					}
+				}
+			}
+
+			button {
+				margin: 0 20px;
+				margin-bottom: 30px;
 			}
 		}
 
