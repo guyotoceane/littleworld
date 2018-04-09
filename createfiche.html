@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head lang="fr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>Littleworld</title>
+		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+		
+	</head>
+	<body>
+		<main>
+			<header>
+				<span class="masque"></span>
+				<div class="logo">
+					<img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
+				</div>
+				<button class="B1">
+					Inscription
+				</button>
+				<button class="B1">
+					Connexion
+				</button>
+			</header>
+			<section>
+				<div class="menu">
+					<ul>
+						<li class="fiche"><a href="">Création d'une fiche</a></li>
+						<li class="livre"><a href="">Créer un livre</a></li>
+						<li class="bibliotheque"><a href="">Bibliothèque</a></li>
+						<li class="sortie"><a href="">Sortie</a></li>
+					</ul>
+				</div>
+				
+				<div class="content">
+						<aside>
+						</aside><!--
+						
+					--><div class="onglet">
+							<div class="container">
+								<div class="row">
+									<form class="needs-validation" novalidate style="width:100%;">
+										<div class="form-row">
+											<div class="col-md-6">
+												<label for="nom">Nom du pays</label>
+												<input type="text" class="form-control" id="nom" placeholder="France" required>
+											</div>
+										
+											<div class="col-md-6">
+												<label for="continent">Continent</label>
+												<input type="text" class="form-control" id="continent" placeholder="Europe" required>
+											</div>
+										</div>
+										
+										<div class="form-row">
+											<div class="col-md-6">
+												<label for="capitale">Capitale</label>
+												<input type="text" class="form-control" id="capitale" placeholder="Paris" required>
+											</div>
+										
+											<div class="col-md-6">
+												<label for="langue">Langue</label>
+												<input type="text" class="form-control" id="langue" placeholder="Français" required>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="col-md-6">
+												<label for="monnaie">Monnaie</label>
+												<input type="text" class="form-control" id="monnaie" placeholder="Euro" required>
+											</div>
+										
+											<div class="col-md-6">
+												<label for="population">Population</label>
+												<input type="text" class="form-control" id="population" placeholder="67 795 000" pattern="[1-9]" required>
+											</div>
+										</div>	
+										<div class="form-row">
+											<div class="col-md-6">
+												<label for="superficie">Superficie (km²)</label>
+												<input type="text" class="form-control" id="superficie" placeholder="672 051" pattern="[1-9]" required>
+											</div>
+										</div>	
+										<div class="form-row">
+											<div class="col-md-12">
+												<label for="description">Description / Information</label>
+												<textarea name="description" id="description" class="form-control" rows="5" ></textarea>
+											</div>
+										</div>		
+										<div class="form-row">
+											<div class="col-md-12">
+												<label for="image">Insérer une image</label>
+												<input name="image" id="image" type="file">
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="col-md-12">
+												<p>Choix de la mise en page</p>
+												<div id="choix-mise-en-page">
+													<input type="radio" id="page1" name="page" checked="checked"><label for="page1"><image src="images/page1.PNG" alt="mise en page image a gauche"></label>
+													<input type="radio" id="page2" name="page" ><label for="page2"><image src="images/page1.PNG" alt="mise en page image a gauche"></label>
+													<input type="radio" id="page3" name="page" ><label for="page3"><image src="images/page1.PNG" alt="mise en page image a gauche"></label>
+
+												
+												</div>
+											</div>
+										</div>
+										
+										
+										
+										
+										
+										<div class="form-row justify-content-end">
+											<button class="btn btn-submit-creer-pays" type="submit">Créer mon pays</button>
+										</div>
+									</form>
+				
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+		</main>
+		
+		
+		
+	<script src="js/less.min.js" ></script>
+	<script src="js/jquery.js" ></script>
+	<script>
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function() {
+		  'use strict';
+		  window.addEventListener('load', function() {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('needs-validation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function(form) {
+			  form.addEventListener('submit', function(event) {
+				if (form.checkValidity() === false) {
+				  event.preventDefault();
+				  event.stopPropagation();
+				}
+				form.classList.add('was-validated');
+			  }, false);
+			});
+		  }, false);
+		})();
+	</script>
+							
+
+	</body>
+</html>
