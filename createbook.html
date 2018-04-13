@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head lang="fr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>Littleworld</title>
+		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+		
+	</head>
+	<body>
+		<main>
+			<header>
+				<span class="masque"></span>
+				<div class="logo">
+					<img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
+				</div>
+				<button class="B1">
+					Inscription
+				</button>
+				<button class="B1">
+					Connexion
+				</button>
+			</header>
+			<section>
+				<div class="menu">
+					<ul>
+						<li class="fiche"><a href="">Création d'une fiche</a></li>
+						<li class="livre"><a href="">Créer un livre</a></li>
+						<li class="bibliotheque"><a href="">Bibliothèque</a></li>
+						<li class="sortie"><a href="">Sortie</a></li>
+					</ul>
+				</div>
+				
+				<div class="content">
+						<aside>
+						</aside><!--
+						
+					--><div class="onglet">
+							<div class="container">
+								<div class="row">
+									<div class="block-title"> 
+										<h2>Choix des fiches</h2>
+									</div>
+								</div>
+								<div class="row">
+									<div class="block-fiche"> 
+										
+										oui
+									</div>
+								</div>
+								<div class="row">
+									<div class="block-title"> 
+										<h2>Assemblage des fiches</h2>
+									</div>
+								</div>
+								<div class="row">
+									<div class="block-fiche"> 
+										
+										oui
+									</div>
+								</div>								
+								<div class="row">
+									<div class="block-btn">
+										<button class="btn-submit">
+											Aperçu
+										</button>
+										<button class="btn-submit">
+											Assembler
+										</button>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+			</section>
+		</main>
+		
+		
+		
+	<script src="js/less.min.js" ></script>
+	<script src="js/jquery.js" ></script>
+	<script>
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function() {
+		  'use strict';
+		  window.addEventListener('load', function() {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('needs-validation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function(form) {
+			  form.addEventListener('submit', function(event) {
+				if (form.checkValidity() === false) {
+				  event.preventDefault();
+				  event.stopPropagation();
+				}
+				form.classList.add('was-validated');
+			  }, false);
+			});
+		  }, false);
+		})();
+	</script>
+							
+
+	</body>
+</html>
