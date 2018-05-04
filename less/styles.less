@@ -8,7 +8,7 @@
 @bibliotheque : #518ea5;
 @sortie: #42b94a;
 
-/* arriÃ¨re plan et contexte */
+/* arrière plan et contexte */
 
 html, body {
 	margin: 0;
@@ -19,8 +19,8 @@ html, body {
 }
 
 main {
-	background-color: @sea;
-	background-image: url(../images/colorful-1974699_1920.png);
+	background-color: white;
+//	background-image: url(../images/colorful-1974699_1920.png);
 	background-size: cover;
 	margin: 0;
 	padding: 0;
@@ -29,12 +29,13 @@ main {
 	height: auto;
 }
 
-/* en-tÃªte */
+/* en-tête */
 
 header {
-	padding: 20px 0;
+	padding: 40px 0;
 	position: relative;
-
+    height: 200px;
+    
 	.masque {
 		top : -80px;
 		left : -50px;
@@ -47,6 +48,26 @@ header {
 		z-index: 0;
 		display: inline-block;
 	}
+    
+    .background {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: stretch;
+        opacity: 0.5;
+        
+        img {
+            width: 20%;
+        }
+    }
 
 	.logo {
 		position : relative;
@@ -79,6 +100,10 @@ header {
 
 }
 
+.head {
+	
+}
+
 button.B1 {
 border : solid 1px white;
 border-radius: 20px;
@@ -89,6 +114,7 @@ font-family: Arial;
 text-align: center;
 box-shadow: 10px 8px 8px @box-shadow;
 width: 140px;
+position: relative;
 }
 
 div.center {
