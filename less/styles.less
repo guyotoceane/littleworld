@@ -3,6 +3,7 @@
 @bandeau : #4b71ad;
 @box-shadow : #203843;
 
+@form-block : #22a6d5;
 @fiche: #276ebb;
 @livre: #ff9734;
 @bibliotheque : #518ea5;
@@ -20,7 +21,6 @@ html, body {
 
 main {
 	background-color: white;
-//	background-image: url(../images/colorful-1974699_1920.png);
 	background-size: cover;
 	margin: 0;
 	padding: 0;
@@ -34,46 +34,29 @@ main {
 header {
 	padding: 40px 0;
 	position: relative;
-    height: 200px;
-    
-	.masque {
-		top : -80px;
-		left : -50px;
-		width: 300px;
-		height: 300px;
-		opacity: 0.5;
-		background-color: white;
-		border-radius: 50%;
-		position: absolute;
-		z-index: 0;
-		display: inline-block;
-	}
+    height: 140px;
+	overflow: hidden;
     
     .background {
-        display: flex;
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         z-index: 0;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        align-content: stretch;
         opacity: 0.5;
-        
+        display: flex;
+
         img {
-            width: 20%;
+        	width: 20%;
         }
     }
 
 	.logo {
 		position : relative;
-		top : -20px;
+		top : -50px;
 		left : 30px;
-		width : 170px;
+		width : 150px;
 		display: inline-block;
 
 		img {
@@ -97,6 +80,34 @@ header {
 		margin-right: 20px;
 	}
 
+	.menu {
+		background-color: white;
+		width: 70%;
+		position: absolute;
+		bottom: 0;
+		right: -10px;
+		border-radius: 15px;
+		border: solid 2px black;
+
+		ul {
+			margin: auto;
+			li {
+				list-style-type: none;
+				a {
+					color: black;
+					font-style: 1.2em;
+					text-decoration: none;
+					display: inline-block;
+					width: 100%;
+				}
+
+				a:hover {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
 
 }
 
@@ -104,7 +115,7 @@ header {
 	
 }
 
-button.B1 {
+.B1 {
 border : solid 1px white;
 border-radius: 20px;
 color: white;
@@ -117,6 +128,12 @@ width: 140px;
 position: relative;
 }
 
+.B1:active {
+	right: -3px;
+	bottom: -3px;
+	box-shadow: none;
+}
+
 div.center {
 	text-align: center;
 }
@@ -124,133 +141,117 @@ div.center {
 
 section {
 
-	padding: 80px 50px 0 50px;
+	min-height: 100%;
 	height: auto;
-	min-height: 60%;
-	position: relative;
-	padding-bottom: 50px;
 
-	div.menu {
+	div.createFiche {
+		background-color: @fiche;
+		height: 100%;
+		padding: 0 80px 20px 150px;
 
-		position: relative;
-		justify-content: flex-end;
-		display: flex;
-		font-family: Arial;
+		.container{
 
-		ul {
-			display: flex;
-			justify-content: flex-end;
-			width: 80%;
-			margin: 0;
+			.row {
 
-			li {
-				display:inline-block;
-				flex-grow: 1;
-				padding: 3px 0;
-				border-radius: 10px;
+				.form-block{
+					background-color: @form-block;
+					padding: 20px;
+					border-radius: 10px;
+					margin: 50px;
 
-				a {
-					text-decoration: none;
-					color: white;
-					width: 100%;
-					text-align: center;
-					display: inline-block;
-				}
-			}
+					label {
+						color: white;
+						text-align: right;
+					}
 
-			li.fiche {
-				background-color: @fiche;
-			}
+					input[type="text"], textarea {
+						border-radius: 0;
+						border: solid 1px black;
+						box-shadow: inset -1px 1px 3px rgb(0, 0, 0);
+					}
 
-			li.livre {
-				background-color: @livre;
-			}
-
-			li.bibliotheque {
-				background-color: @bibliotheque;
-			}
-
-			li.sortie {
-				background-color: @sortie;
-			}
-
-		}
-	}
-
-	.content {
-
-		display: flex;
-		min-height: 80%;
-		height: auto;
-		border: solid 2px #19364e;
-		border-radius: 10px;
-
-		aside {
-			display: inline-block;
-			width: 20%;
-			background-color: @bibliotheque;
-			border-right: solid 4px #c9cbcc;
-		}
-
-		div.onglet {
-			background-color: @bibliotheque;
-			height: auto;
-			min-height: 400px;
-			padding: 20px 0;
-			width: 80%;
-			display: inline-block;
-
-			h2 {
-				margin: 0 auto;
-				font-family: Calibri;
-				font-size: 1em;
-				font-weight: bold;
-			}
-
-			h2.label {
-				color: white;
-				text-align: right;
-				background-color: @bandeau;
-				padding: 5px 20px;
-				box-shadow: 5px 5px 5px @box-shadow;
-				width: 150px;
-				display: inline-block;
-
-			}
-
-			div.slider {
-				height: 120px;
-				width: 60%;
-				margin: 40px auto;
-				background-color: white;
-
-				ul {
-					display: flex;
-					justify-content: space-around;
-					height: 100%;
-					padding: 0;
-					li {
-						display: inline-block;
-						height: 100%;
-						img {
-							height: 100%;
-						}
-						img:hover {
-							transition: 1s;
-							opacity: 0.6;
-							border: solid 2px black;
-						}
+					input[type="file"]{
+						display:none;
 					}
 				}
 			}
-
-			button {
-				margin: 0 20px;
-				margin-bottom: 30px;
-			}
 		}
-
 	}
+
+	// .content {
+
+	// 	display: flex;
+	// 	min-height: 80%;
+	// 	height: auto;
+	// 	border: solid 2px #19364e;
+	// 	border-radius: 10px;
+
+	// 	aside {
+	// 		display: inline-block;
+	// 		width: 20%;
+	// 		background-color: @bibliotheque;
+	// 		border-right: solid 4px #c9cbcc;
+	// 	}
+
+	// 	div.onglet {
+	// 		background-color: @bibliotheque;
+	// 		height: auto;
+	// 		min-height: 400px;
+	// 		padding: 20px 0;
+	// 		width: 80%;
+	// 		display: inline-block;
+
+	// 		h2 {
+	// 			margin: 0 auto;
+	// 			font-family: Calibri;
+	// 			font-size: 1em;
+	// 			font-weight: bold;
+	// 		}
+
+	// 		h2.label {
+	// 			color: white;
+	// 			text-align: right;
+	// 			background-color: @bandeau;
+	// 			padding: 5px 20px;
+	// 			box-shadow: 5px 5px 5px @box-shadow;
+	// 			width: 150px;
+	// 			display: inline-block;
+
+	// 		}
+
+	// 		div.slider {
+	// 			height: 120px;
+	// 			width: 60%;
+	// 			margin: 40px auto;
+	// 			background-color: white;
+
+	// 			ul {
+	// 				display: flex;
+	// 				justify-content: space-around;
+	// 				height: 100%;
+	// 				padding: 0;
+	// 				li {
+	// 					display: inline-block;
+	// 					height: 100%;
+	// 					img {
+	// 						height: 100%;
+	// 					}
+	// 					img:hover {
+	// 						transition: 1s;
+	// 						opacity: 0.6;
+	// 						border: solid 2px black;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+
+	// 		button {
+	// 			margin: 0 20px;
+	// 			margin-bottom: 30px;
+	// 		}
+	// 	}
+
+	// }
 
 }
 
