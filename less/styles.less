@@ -1,12 +1,14 @@
 @button : #276ebb;
 @sea : #A1E5F8;
 @bandeau : #4b71ad;
+@bandeau2 : #8693ba;
 @box-shadow : #203843;
 @step: 150px;
 
 @form-block : #22a6d5;
 @fiche: #276ebb;
-@livre: #ff9734;
+@livre: #06baa0;
+@livreAside : #069da0;
 @bibliotheque : #518ea5;
 @sortie: #42b94a;
 
@@ -145,6 +147,8 @@ section {
 	min-height: 100%;
 	height: auto;
 
+	// creation de fiche
+
 	div.createFiche {
 		background-color: @fiche;
 		height: 100%;
@@ -215,80 +219,111 @@ section {
 		}
 	}
 
-	// .content {
+	// creation de livre
 
-	// 	display: flex;
-	// 	min-height: 80%;
+	div.createLivre {
+
+		aside {
+			// border-right: solid 20px #c9cbcc;
+			background-color: @livreAside;
+			padding: 0;
+			position: relative;
+
+				.label {
+					width: 100%;
+				}
+
+				h2, h3 {
+					background-color: @bandeau2;
+					padding: 0 50px;
+					text-align: left;
+				}
+
+				h2 {
+					margin: 0 auto;
+					font-family: Calibri;
+					font-size: 1.2em;
+					font-weight: bold;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					margin-bottom: 20px;
+				}
+
+				h3 {
+					background-color: @bandeau2;
+					font-size: 1em;
+					color: white;
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+
+				.rubrique {
+					margin-bottom: 20px;
+					padding: 0 50px;
+
+				}
+
+		}
+		
+		aside:after {
+			content: "";
+			display: inline-block;
+			background-color: #c9cbcc;
+			width: 15px;
+			height: 100%; 
+			box-shadow: inset 2px 2px 5px rgb(0, 0, 0);
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		div.content {
+			background-color: @livre;
+		}
+
+	}
+
+	// div.onglet {
+	// 	background-color: @bibliotheque;
 	// 	height: auto;
-	// 	border: solid 2px #19364e;
-	// 	border-radius: 10px;
+	// 	min-height: 400px;
+	// 	padding: 20px 0;
+	// 	width: 80%;
+	// 	display: inline-block;
 
-	// 	aside {
-	// 		display: inline-block;
-	// 		width: 20%;
-	// 		background-color: @bibliotheque;
-	// 		border-right: solid 4px #c9cbcc;
-	// 	}
+	// 	div.slider {
+	// 		height: 120px;
+	// 		width: 60%;
+	// 		margin: 40px auto;
+	// 		background-color: white;
 
-	// 	div.onglet {
-	// 		background-color: @bibliotheque;
-	// 		height: auto;
-	// 		min-height: 400px;
-	// 		padding: 20px 0;
-	// 		width: 80%;
-	// 		display: inline-block;
-
-	// 		h2 {
-	// 			margin: 0 auto;
-	// 			font-family: Calibri;
-	// 			font-size: 1em;
-	// 			font-weight: bold;
-	// 		}
-
-	// 		h2.label {
-	// 			color: white;
-	// 			text-align: right;
-	// 			background-color: @bandeau;
-	// 			padding: 5px 20px;
-	// 			box-shadow: 5px 5px 5px @box-shadow;
-	// 			width: 150px;
-	// 			display: inline-block;
-
-	// 		}
-
-	// 		div.slider {
-	// 			height: 120px;
-	// 			width: 60%;
-	// 			margin: 40px auto;
-	// 			background-color: white;
-
-	// 			ul {
-	// 				display: flex;
-	// 				justify-content: space-around;
+	// 		ul {
+	// 			display: flex;
+	// 			justify-content: space-around;
+	// 			height: 100%;
+	// 			padding: 0;
+	// 			li {
+	// 				display: inline-block;
 	// 				height: 100%;
-	// 				padding: 0;
-	// 				li {
-	// 					display: inline-block;
+	// 				img {
 	// 					height: 100%;
-	// 					img {
-	// 						height: 100%;
-	// 					}
-	// 					img:hover {
-	// 						transition: 1s;
-	// 						opacity: 0.6;
-	// 						border: solid 2px black;
-	// 					}
+	// 				}
+	// 				img:hover {
+	// 					transition: 1s;
+	// 					opacity: 0.6;
+	// 					border: solid 2px black;
 	// 				}
 	// 			}
 	// 		}
-
-	// 		button {
-	// 			margin: 0 20px;
-	// 			margin-bottom: 30px;
-	// 		}
 	// 	}
 
+	// 	button {
+	// 		margin: 0 20px;
+	// 		margin-bottom: 30px;
+	// 	}
 	// }
+
+// }
 
 }
 
@@ -319,6 +354,23 @@ form{
 		}
 		
 	}
+}
+
+
+h2 {
+	margin: 0 auto;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h2.label {
+	color: white;
+	text-align: right;
+	padding: 5px 20px;
+	box-shadow: 5px 5px 5px @box-shadow;
+	display: inline-block;
+
 }
 
 .block-fiche{

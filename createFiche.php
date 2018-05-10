@@ -122,7 +122,8 @@
 					</div>
 				</div>
 				<div class="form-row justify-content-center">
-					<button class="B1 mx-3">Aperçu</button>
+					<button class="B1 mx-3
+					">Aperçu</button>
 					<button class="B1 mx-3 btn-submit-creer-pays" type="submit">Sauvegarder</button>
 				</div>
 				</form>
