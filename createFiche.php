@@ -15,7 +15,7 @@
 		<div class="row">
 			<form class="needs-validation" novalidate style="width:100%;">
 				<div class="form-block">
-
+					<span>Etape 1</span>
 					<div class="form-group row">
 						<div class="col-md-6 row">
 							<label for="continent" class="col-md-4">Continent du pays</label>
@@ -100,19 +100,30 @@
 						</div>
 					</div>
 				</div>
-				<div class="form-block">		
+				<div class="form-block">
+					<span>Etape 2</span>		
 					<div class="form-row">
 						<div class="col-md-12">
 							<p>Choix de la mise en page</p>
 							<div id="choix-mise-en-page">
-								<input type="radio" id="page1" name="page" checked="checked"><label for="page1"><img src="images/page1.PNG" alt="mise en page image a gauche"></label>
-								<input type="radio" id="page2" name="page" ><label for="page2"><image src="images/page1.PNG" alt="mise en page image a gauche"></label>			
+								<input type="radio" id="page1" name="page" checked="checked"><label for="page1"><img src="images/mep1.PNG" alt="mise en page image a gauche"></label>
+								<input type="radio" id="page2" name="page" ><label for="page2"><image src="images/mep2.PNG" alt="mise en page image a gauche"></label>			
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="form-row justify-content-end">
-					<button class="btn btn-submit-creer-pays" type="submit">Créer mon pays</button>
+				<div class="form-block">
+					<span>Etape 3</span>
+					<div class="form-row">
+						<p class="row">Séléctionnez image du pays </p>
+						<p class="row">(seulement si choix de mise en page 2 effectué) :</p>
+						<label class="B1">Parcourir</label>
+						<input type="file" value="parcourir">
+					</div>
+				</div>
+				<div class="form-row justify-content-center">
+					<button class="B1 mx-3">Aperçu</button>
+					<button class="B1 mx-3 btn-submit-creer-pays" type="submit">Sauvegarder</button>
 				</div>
 				</form>
 			</div>
