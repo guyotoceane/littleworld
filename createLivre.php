@@ -18,7 +18,7 @@
 				<div class="onglet">
 				    <h2 class="label">Choix des fiches : </h2>
 					<div class="row">
-						<div class="block-fiche px-3"> 
+						<div class="block-fiche px-3 col-md-8"> 
 							<ul class="d-flex justify-content-around">
 								<li><img src="images/page1.PNG"></li>
 								<li><img src="images/page1.PNG"></li>
@@ -30,7 +30,7 @@
 					</div>
                     <h2 class="label">Assemblage des fiches : </h2>
 					<div class="row">
-						<div class="block-fiche px-3"> 
+						<div class="block-fiche px-3 col-md-8"> 
 							<ul class="d-flex justify-content-around">
 								<li><img src="images/page1.PNG"></li>
 								<li><img src="images/page1.PNG"></li>
