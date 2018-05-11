@@ -32,25 +32,7 @@
 						<form class="needs-validation form-user" novalidate style="width:100%;">
 							<div class="form-block">
 								<div class="text-center tittle-inscription">
-									<h3> INSCRIPTION </h3>
-								</div>
-
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<label for="nom">Nom</label>
-									</div>
-									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="nom" required>
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<label for="prenom">Prénom</label>
-									</div>
-									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="prenom" required>
-									</div>
+									<h3> CONNEXION </h3>
 								</div>
 
 								<div class="row">
@@ -71,34 +53,9 @@
 									</div>
 								</div>
 								
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<label for="pays">Pays</label>
-									</div>
-									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="pays" required>
-									</div>
-								</div>
+										
 								
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<label for="ville">Ville</label>
-									</div>
-									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="ville" required>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<label for="adresse">Adresse</label>
-									</div>
-									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="adresse" required>
-									</div>
-								</div>		
-								
-								<button class="B1 mx-3 btn-submit-inscription" type="submit">Inscription</button>
+								<button class="B1 mx-3 btn-submit-inscription" type="submit">Connexion</button>
 							</div>
 						</form>
 					
