@@ -7,25 +7,9 @@
 		<link rel="stylesheet/less" type="text/css" href="less/styles.less" />
 		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
 	</head>
-	<body class="background-image">
-		<header class="head">
-            <div>
-                <div class="logo">
-                    <img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
-                </div>
-                <a href="inscription.php">
-					<button class="B1">
-                    Inscription
-					</button>
-				</a>
-				<a href="connexion.php">
-					<button class="B1">
-						Connexion
-					</button>
-				</a>
-            </div>
-		</header>
-		<section>
+	<body>
+		<?php include("header.php"); ?>
+		<section class="background-image">
 			<div class="inscription">
 				<div class="container">
 					<div class="row">
@@ -64,5 +48,7 @@
 			</div>
 		</section>
 		<script src="js/less.min.js" ></script>
+		
+		
 	</body>
 </html>
