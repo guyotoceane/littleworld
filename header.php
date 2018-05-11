@@ -23,10 +23,9 @@
             </div>
             <nav class="menu">
                 <ul class="row">
-                    <li class="fiche col-md-3"><a href="createFiche.php">Création d'une fiche</a></li>
-                    <li class="livre col-md-3"><a href="createLivre.php">Créer un livre</a></li>
-                    <li class="bibliotheque col-md-3"><a href="">Bibliothèque</a></li>
-                    <li class="sortie col-md-3"><a href="">Sortie</a></li>
+                    <li class="fiche col-md-4"><a href="createFiche.php">Création d'une fiche</a></li>
+                    <li class="livre col-md-4"><a href="createLivre.php">Créer un livre</a></li>
+                    <li class="bibliotheque col-md-4"><a href="">Bibliothèque / Sortie</a></li>
                 </ul>
             </nav>
         </header>
