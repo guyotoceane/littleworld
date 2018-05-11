@@ -14,9 +14,12 @@
                 <button class="B1">
                     Inscription
                 </button>
-                <button class="B1">
-                    Connexion
-                </button>
+                <a href="http://localhost/littleworldBack/user/">
+                    <button class="B1">
+                        Connexion
+                    </button>
+                </a>
+
             </div>
             <nav class="menu">
                 <ul class="row">

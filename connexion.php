@@ -18,7 +18,7 @@
                     Inscription
 					</button>
 				</a>
-				<a href="connexion.php">
+				<a href="http://localhost/littleworldBack/user/">
 					<button class="B1">
 						Connexion
 					</button>
@@ -29,7 +29,7 @@
 			<div class="inscription">
 				<div class="container">
 					<div class="row">
-						<form class="needs-validation form-user" novalidate style="width:100%;">
+						<form action="http://localhost/littleworldBack/user/connect" method="get" class="needs-validation form-user" novalidate style="width:100%;">
 							<div class="form-block">
 								<div class="text-center tittle-inscription">
 									<h3> CONNEXION </h3>
@@ -40,7 +40,7 @@
 										<label for="mail">E-mail</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="mail" required>
+										<input type="text" class="form-control " name="mail" id="mail" required>
 									</div>
 								</div>
 								
@@ -49,7 +49,7 @@
 										<label for="pwd">Mot de passe</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="password" class="form-control " id="pwd" required>
+										<input type="password" class="form-control " name="pwd" id="pwd" required>
 									</div>
 								</div>
 								
