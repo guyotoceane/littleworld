@@ -16,9 +16,7 @@
 			<?php include("aside.php"); ?> 
 			<div class="content col-md-9">
 				<div class="onglet">
-					<div class="block-title"> 
-						<h2 class="label">Choix des fiches</h2>
-					</div>
+				    <h2 class="label">Choix des fiches : </h2>
 					<div class="row">
 						<div class="block-fiche px-3"> 
 							<ul class="d-flex justify-content-around">
@@ -30,11 +28,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="row">
-						<div class="block-title"> 
-							<h2 class="label">Assemblage des fiches</h2>
-						</div>
-					</div>
+                    <h2 class="label">Assemblage des fiches : </h2>
 					<div class="row">
 						<div class="block-fiche px-3"> 
 							<ul class="d-flex justify-content-around">

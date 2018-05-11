@@ -1,6 +1,6 @@
 @button : #276ebb;
 @sea : #A1E5F8;
-@bandeau : #4b71ad;
+@bandeau : #069da0;
 @bandeau2 : #8693ba;
 @box-shadow : #203843;
 @step: 150px;
@@ -14,12 +14,14 @@
 
 /* arrière plan et contexte */
 
-html, body {
+html {
+    height: 100%;
+}	
+
+body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 	min-height: 100%;
-
 }
 
 main {
@@ -144,15 +146,18 @@ div.center {
 
 section {
 
-	min-height: 100%;
+//	min-height: 100vh;
 	height: auto;
 
 	// creation de fiche
 
 	div.createFiche {
 		background-color: @fiche;
-		height: 100%;
 		padding: 0 80px 20px 150px;
+        height:auto;
+	    min-height: 100vh;
+
+
 
 		.container{
 
@@ -227,6 +232,8 @@ section {
 			// border-right: solid 20px #c9cbcc;
 			background-color: @livreAside;
 			padding: 0;
+            height:auto;
+            min-height: 100vh;
 			position: relative;
 
 				.label {
@@ -260,6 +267,11 @@ section {
 				.rubrique {
 					margin-bottom: 20px;
 					padding: 0 50px;
+                    
+                    span {
+                        margin: 5px;
+                        display: inline-block;
+                    }
 
 				}
 
@@ -269,7 +281,7 @@ section {
 			content: "";
 			display: inline-block;
 			background-color: #c9cbcc;
-			width: 15px;
+			width: 20px;
 			height: 100%; 
 			box-shadow: inset 2px 2px 5px rgb(0, 0, 0);
 			position: absolute;
@@ -279,6 +291,19 @@ section {
 
 		div.content {
 			background-color: @livre;
+            height:auto;
+            padding: 0;
+            
+            h2.label {
+                background-color: @bandeau;
+                font-size: 1.2em;
+                padding-left: 30px;
+            }
+            
+            div.block-fiche {
+                
+            }
+
 		}
 
 	}
