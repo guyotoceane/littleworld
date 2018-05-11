@@ -19,6 +19,7 @@
 				    <h2 class="label">Choix des fiches : </h2>
 					<div class="row">
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<div class="block-fiche px-3 col-md-8"> 
 							<ul class="d-flex justify-content-around">
 								<li><img src="images/page1.PNG"></li>
@@ -26,6 +27,11 @@
 								<li><img src="images/page1.PNG"></li>
 								<li><img src="images/page1.PNG"></li>
 								<li><img src="images/page1.PNG"></li>
+=======
+						<div class="block-fiche px-3"> 
+							<ul class="d-flex justify-content-around" id="list-fiches">
+
+>>>>>>> 6de209396bc9bdeffaf401d2c3344dd6664f30b9
 =======
 						<div class="block-fiche px-3"> 
 							<ul class="d-flex justify-content-around" id="list-fiches">
