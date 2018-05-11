@@ -57,7 +57,7 @@
 						<div class="col-md-6 row">
 							<label for="population" class="col-md-4">Monnaie du pays</label>
 							<div class="col-md-8">
-								<input type="text" class="form-control" name="population" id="population" placeholder="Euro" required>
+								<input type="text" class="form-control" name="monnaie" id="monnaie" placeholder="Euro" required>
 							</div>
 						</div>
 					</div>	
