@@ -18,8 +18,6 @@
 				<div class="onglet">
 				    <h2 class="label">Choix des fiches : </h2>
 					<div class="row">
-<<<<<<< HEAD
-<<<<<<< HEAD
 						<div class="block-fiche px-3 col-md-8"> 
 							<ul class="d-flex justify-content-around">
 								<li><img src="images/page1.PNG"></li>
@@ -27,16 +25,6 @@
 								<li><img src="images/page1.PNG"></li>
 								<li><img src="images/page1.PNG"></li>
 								<li><img src="images/page1.PNG"></li>
-=======
-						<div class="block-fiche px-3"> 
-							<ul class="d-flex justify-content-around" id="list-fiches">
-
->>>>>>> 6de209396bc9bdeffaf401d2c3344dd6664f30b9
-=======
-						<div class="block-fiche px-3"> 
-							<ul class="d-flex justify-content-around" id="list-fiches">
-
->>>>>>> 6de209396bc9bdeffaf401d2c3344dd6664f30b9
 							</ul>
 						</div>
 					</div>
@@ -62,8 +50,6 @@
 							</button>
 						</div>
 					</div>
-						
-					</div>
 				</div>
 			</div>
 		</div>
@@ -74,51 +60,51 @@
 <script src="js/jquery.js" ></script>
 
 <script>
-
-    $.ajax({
-        // chargement du fichier externe monfichier-ajax.php
-        url      : "http://localhost/littleworldBack/fiche/",
-        cache    : false,
-        type : "GET",
-        error    : function(request, error) { // Info Debuggage si erreur
-            alert("Erreur : responseText: "+request.responseText);
-        },
-        success  : function(data) {
-
-            data = JSON.parse(data);
-
-            console.log(data.length)
-
-
-            for(let i=0; i< data.length; i++){
-                let li = document.createElement('li');
-                console.log(data[i])
-
-                // li.innerText = data[i].nam_land
-
-                let img = document.createElement('img');
-
-                img.setAttribute('src', "./images/fiches_pays/"+data[i].nam_img);
-                img.style.width = '5em'
-
-                let text = document.createElement("p")
-
-                text.appendChild(document.createTextNode(data[i].nam_land))
-
-                text.style.textAlign = "center"
-
-                li.appendChild(img);
-
-                li.appendChild(text);
-
-                li.id = data[i].idt_lnd
-
-                document.getElementById('list-fiches').appendChild(li)
-
-            }
-
-        }
-    })
+//
+//    $.ajax({
+//        // chargement du fichier externe monfichier-ajax.php
+//        url      : "http://localhost/littleworldBack/fiche/",
+//        cache    : false,
+//        type : "GET",
+//        error    : function(request, error) { // Info Debuggage si erreur
+//            alert("Erreur : responseText: "+request.responseText);
+//        },
+//        success  : function(data) {
+//
+//            data = JSON.parse(data);
+//
+//            console.log(data.length)
+//
+//
+//            for(let i=0; i< data.length; i++){
+//                let li = document.createElement('li');
+//                console.log(data[i])
+//
+//                // li.innerText = data[i].nam_land
+//
+//                let img = document.createElement('img');
+//
+//                img.setAttribute('src', "./images/fiches_pays/"+data[i].nam_img);
+//                img.style.width = '5em'
+//
+//                let text = document.createElement("p")
+//
+//                text.appendChild(document.createTextNode(data[i].nam_land))
+//
+//                text.style.textAlign = "center"
+//
+//                li.appendChild(img);
+//
+//                li.appendChild(text);
+//
+//                li.id = data[i].idt_lnd
+//
+//                document.getElementById('list-fiches').appendChild(li)
+//
+//            }
+//
+//        }
+//    })
 
 </script>
 
