@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
 	</head>
 <body>
-<? include("header.php"); ?>
+<?php include("header.php"); ?>
 <section>
 <div class="onglet createFiche">
 	<div class="container">
