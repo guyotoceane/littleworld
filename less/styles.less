@@ -37,7 +37,7 @@ main {
 /* en-tête */
 
 header {
-	padding: 40px 0;
+	
 	position: relative;
     height: 140px;
 	overflow: hidden;
@@ -461,17 +461,19 @@ h2.label {
 }
 
 .background-image{
-	background-image: url("../images/background.png");
-	 background-repeat: no-repeat;
-    background-size: 100% auto;
-	background-color: #cccccc;
-	
-
+	background-repeat: no-repeat;
+    background-size: auto auto;
+	background-color: #a0adff;
+	background-position: top;
+	padding-top: 10px;
 }
+
+
 .inscription{
-	background-color: rgba(200, 200, 200, 0.8);
-	margin: 10px 10% 200px 10%;
+	background-color: rgba(200, 200, 200, 0.92);
+	margin: 0px 10% 0 10%;
 	border-radius: 5px;
+	box-shadow: 5px 5px 5px @box-shadow;
 	
 	input[type="text"], textarea, input[type="password"] {
 		border-radius: 0;
@@ -494,6 +496,7 @@ h2.label {
 	
 	}
 }
+
 
 .form-user{
 	margin: 0 5% 0 5%;

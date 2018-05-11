@@ -7,27 +7,11 @@
 		<link rel="stylesheet/less" type="text/css" href="less/styles.less" />
 		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
 	</head>
-	<body class="background-image">
-		<header class="head">
-            <div>
-                <div class="logo">
-                    <img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
-                </div>
-                <a href="inscription.php">
-					<button class="B1">
-                    Inscription
-					</button>
-				</a>
-				<a href="connexion.php">
-					<button class="B1">
-						Connexion
-					</button>
-				</a>
-            </div>
-		</header>
-		<section>
-			<div class="inscription">
-				<div class="container">
+	<body>
+		<?php include("header.php"); ?>
+		<section class="background-image">
+			<div class="container">
+				<div class="inscription">
 					<div class="row">
 						<form class="needs-validation form-user" novalidate style="width:100%;">
 							<div class="form-block">
@@ -64,39 +48,23 @@
 								
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
-										<label for="pwd">Mot de passe</label>
+										<label for="password">Mot de passe</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="password" class="form-control " id="pwd" required>
+										<input type="password" class="form-control " id="password" required>
 									</div>
 								</div>
 								
 								<div class="row">
 									<div class="col-md-4 col-sm-12">
-										<label for="pays">Pays</label>
+										<label for="confirm_password">Verification mot de passe</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="pays" required>
+										<input type="password" class="form-control" id="confirm_password" required>
 									</div>
 								</div>
 								
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<label for="ville">Ville</label>
-									</div>
-									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="ville" required>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-4 col-sm-12">
-										<label for="adresse">Adresse</label>
-									</div>
-									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="adresse" required>
-									</div>
-								</div>		
+	
 								
 								<button class="B1 mx-3 btn-submit-inscription" type="submit">Inscription</button>
 							</div>
@@ -107,5 +75,20 @@
 			</div>
 		</section>
 		<script src="js/less.min.js" ></script>
+		<script>
+		    var element = document.getElementById('confirm_password');
+
+			element.addEventListener('keyup', function() {
+
+			
+			  if (document.getElementById('password').value == element.value) {
+				element.style.border = 'solid 1px green';
+			  } else {
+				element.style.border = 'solid 1px red';
+
+			  }
+			})
+		
+		</script>
 	</body>
 </html>
