@@ -9,16 +9,21 @@
             </div>
             <div>
                 <div class="logo">
-                    <img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
+					<a href="index.php">
+						<img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
+					</a>
                 </div>
-                <button class="B1">
-                    Inscription
-                </button>
-                <a href="http://localhost/littleworldBack/user/">
-                    <button class="B1">
-                        Connexion
-                    </button>
-                </a>
+
+				<a href="inscription.php">
+					<button class="B1">
+						Inscription
+					</button>
+				</a>
+				<a href="connexion.php">
+					<button class="B1">
+						Connexion
+					</button>
+				</a>
 
             </div>
             <nav class="menu">
