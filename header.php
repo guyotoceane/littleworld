@@ -30,7 +30,7 @@
                 <ul class="row">
                     <li class="fiche col-md-4"><a href="createFiche.php">Création d'une fiche</a></li>
                     <li class="livre col-md-4"><a href="createLivre.php">Créer un livre</a></li>
-                    <li class="bibliotheque col-md-4"><a href="">Bibliothèque / Sortie</a></li>
+                    <li class="bibliotheque col-md-4"><a href="bibliotheque.php">Bibliothèque / Sortie</a></li>
                 </ul>
             </nav>
         </header>

@@ -2,6 +2,7 @@
 @sea : #A1E5F8;
 @bandeau : #069da0;
 @bandeau2 : #8693ba;
+@bandeau3 : #616ea6;
 @box-shadow : #203843;
 @step: 150px;
 
@@ -9,7 +10,7 @@
 @fiche: #276ebb;
 @livre: #06baa0;
 @livreAside : #069da0;
-@bibliotheque : #518ea5;
+@bibliotheque : #618ba6;
 @sortie: #42b94a;
 
 /* arrière plan et contexte */
@@ -234,11 +235,10 @@ section {
 
 	// creation de livre
 
-	div.createLivre {
+	div.createLivre, div.bibliotheque {
 
 		aside {
 			// border-right: solid 20px #c9cbcc;
-			background-color: @livreAside;
 			padding: 0;
             height:auto;
             min-height: 100vh;
@@ -249,7 +249,6 @@ section {
 				}
 
 				h2, h3 {
-					background-color: @bandeau2;
 					padding: 0 50px;
 					text-align: left;
 				}
@@ -265,7 +264,6 @@ section {
 				}
 
 				h3 {
-					background-color: @bandeau2;
 					font-size: 1em;
 					color: white;
 					padding-top: 5px;
@@ -298,14 +296,14 @@ section {
 		}
 
 		div.content {
-			background-color: @livre;
             height:auto;
             padding: 0;
             
             h2.label {
-                background-color: @bandeau;
                 font-size: 1.2em;
                 padding: 10px;
+                min-width: 200px;
+                width: auto;
                 padding-right: 15px;
                 padding-left: 40px;
                 margin: 20px 0;
@@ -323,16 +321,73 @@ section {
             }
             
             div.block-btn {
-                margin: 100px auto;
+                margin: 50px auto;
                 
                 button {
                     margin: 0 20px;
-                    background-color: @bandeau;
                 }
             }
 
 		}
 
+	}
+
+	// couleur pour la creation de livre
+
+	div.createLivre {
+
+		aside {
+			background-color: @livreAside;
+
+			h2 {
+				background-color: @bandeau;
+			}
+
+			h3 {
+				background-color: @bandeau2;
+			}
+		}
+
+		div.content {
+			background-color: @livre;
+
+			h2.label {
+                background-color: @bandeau;
+			}
+
+			button {
+				 background-color: @bandeau;
+			}
+		}
+	}
+
+	// couleur pour la bibliotheque
+
+	div.bibliotheque {
+
+		aside {
+			background-color: @bibliotheque;
+
+			h2 {
+				background-color: @bandeau2;
+			}
+
+			h3 {
+				background-color: @bandeau2;
+			}
+		}
+
+		div.content {
+			background-color: @bibliotheque;
+
+			h2.label {
+                background-color: @bandeau3;
+			}
+
+			button {
+				 background-color: @bandeau3;
+			}
+		}
 	}
 
 	// div.onglet {
