@@ -1,0 +1,62 @@
+@yellowblock : #fff8b8;
+@gray: #b5aeab;
+
+// première format de fiche en sortie PDF ou EPub
+
+div.fiche1 {
+    border: solid 1px black;
+    
+    h1 {
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        color: black;
+        font-family: "impact";
+        letter-spacing: .2rem;
+    }
+    
+    .row {
+        padding: 0;
+        
+        .story {
+            padding: 0;
+            
+            p {
+                margin: 10px 20px;
+            }
+        }
+        
+        h2 {
+            background: gray;
+            color: white;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: inline-block;
+            width: auto;
+            padding: 10px 20px;
+        }
+        
+        div.data-block {
+            background-color: @yellowblock;
+            border: solid 3px black;
+            text-align: left;
+            padding: 10px;
+            vertical-align: middle;
+        }
+    }
+    
+    .picture {
+        padding: 50px 15%;
+        height: 600px;
+
+        img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border: solid 10px black;
+        }   
+    }
+}
+
+// deuxième format de fiche en sortie PDF ou EPub
