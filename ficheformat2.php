@@ -10,8 +10,12 @@
 <body>
     <div class="container fiche2">
         <div class="row titre">
-            <h1>Allemagne</h1>
+            <img src="images/catalonia-3087795_1280.png" alt="" class="col-md-3">
+            <img src="images/Drapeau_Allemagne.png" alt="" class="col-md-3">
+            <img src="images/england-2906827_1280.png" alt="" class="col-md-3">
+            <img src="images/flag-of-norway-3116623_1280.jpg" alt="" class="col-md-3">
         </div>
+        <h1>Allemagne</h1>
         <div class="blockBleu">
             <div class="row">
                 <h2>Histoire du pays</h2>
@@ -42,8 +46,12 @@
                     <img src="images/background.png" alt="image du pays">
                 </div>
             </div>
-            <div class="row footer">
-            </div>
+        </div>
+        <div class="row footer">
+            <img src="images/flag-of-norway-3116623_1280.jpg" alt="" class="col-md-3">
+            <img src="images/england-2906827_1280.png" alt="" class="col-md-3">
+            <img src="images/Drapeau_Allemagne.png" alt="" class="col-md-3">
+            <img src="images/catalonia-3087795_1280.png" alt="" class="col-md-3">
         </div>
     </div>
 <script src="js/less.min.js" ></script>

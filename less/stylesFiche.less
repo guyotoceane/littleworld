@@ -1,5 +1,7 @@
 @yellowblock : #fff8b8;
 @gray: #b5aeab;
+@blueblock : #d9f1fb;
+@bluelabel: #273583;
 
 // première format de fiche en sortie PDF ou EPub
 
@@ -11,7 +13,7 @@ div.fiche1 {
         font-size: 3em;
         font-weight: bold;
         color: black;
-        font-family: "impact";
+        font-family: "impact", Arial;
         letter-spacing: .2rem;
     }
     
@@ -60,3 +62,103 @@ div.fiche1 {
 }
 
 // deuxième format de fiche en sortie PDF ou EPub
+
+div.fiche2 {
+    padding: 0;
+    margin: auto;
+    padding-top: 50px;
+    border: solid 1px black;
+    background-color: @gray;
+    position: relative;
+
+    .titre, .footer{
+        height: 140px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        opacity: 0.5;
+        position: absolute;
+
+        img {
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            height: 100%;
+        }
+    }
+
+    .titre {
+        top: 50px;
+    }
+
+    .footer {
+        bottom: 0;
+    }
+
+    h1, .blockBleu {
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 3em;
+        font-family: "impact", Arial;
+        font-weight: bold;
+        text-decoration: underline;
+        letter-spacing: .2em;
+        margin: 50px auto;
+        text-shadow: white 2px 2px, white -2px 2px, white -2px -2px, white 2px -2px
+    }
+
+    .blockBleu {
+        background-color: @blueblock;
+        padding: 20px 30px;
+        text-align: left;
+        margin-bottom: 200px;
+
+        > div.row {
+            h2 {
+                text-align: left;
+                font-size: 1.5em;
+                font-family: "impact", Arial;
+                font-style: italic;
+                text-decoration: underline;
+                letter-spacing: .2em;
+                margin: 20px 0;
+            }
+
+            > p {
+                font-family: Arial;
+                font-size: 1.2em;
+                margin-bottom: 50px;
+            }
+
+            .col-md-4, .col-md-8 {
+                vertical-align: middle;
+            }
+
+            .data-block {
+                border: solid 1px @bluelabel;
+                color: white;
+
+                p {
+                    height: auto;
+                    margin: 0;
+                    min-height: 20px;
+                }
+
+                p:nth-child(2n+1){
+                    background-color: @bluelabel;
+                }
+            }
+        }
+
+        img {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border: solid 1px black;
+        }
+    }
+}
