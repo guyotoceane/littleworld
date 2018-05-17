@@ -45,11 +45,11 @@
 		<div class="row">
 			<?php include("aside.php"); ?> 
 			<div class="content col-md-9">
-				<div class="onglet container">
+				<div class="onglet wrapper">
 				    <h2 class="label">Choix des fiches : </h2>
 					<div class="row">
 						<div class="block-fiche px-3 col-md-8">
-							<ul class="connected-sortable d-flex justify-content-around droppable-area1" id="left-rollbacks">
+							<ul class="connected-sortable d-flex justify-content-around container" id="left-rollbacks">
 
 							</ul>
 						</div>
@@ -57,8 +57,8 @@
                     <h2 class="label">Assemblage des fiches : </h2>
 					<div class="row">
 						<div class="block-fiche px-3 col-md-8">
-							<ul class="connected-sortable d-flex justify-content-around droppable-area2" id="right-rollbacks">
-
+							<ul  class="connected-sortable d-flex justify-content-around container" id="right-rollbacks">
+                                <li id="legende">Glissez les fiches que vous voulez assenbler</li>
 
 							</ul>
 						</div>
@@ -82,11 +82,13 @@
 <script src="js/less.min.js" ></script>
 
 <script src="js/jquery.js" ></script>
-<script
-        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
+
 <script>
+
+
 
    $.ajax({
        // chargement du fichier externe monfichier-ajax.php
@@ -132,20 +134,40 @@
 
            }
 
+           let li = document.createElement('li');
+           li.appendChild(document.createTextNode(String.fromCharCode(160)));
+           document.getElementById('left-rollbacks').appendChild(li);
+
+           li = document.createElement('li');
+           li.appendChild(document.createTextNode(String.fromCharCode(160)));
+           document.getElementById('right-rollbacks').appendChild(li);
+
+       }
+   });
+
+   dragula([document.getElementById('left-rollbacks'), document.getElementById('right-rollbacks')]).on('drop', function (el) {
+       console.log(document.getElementById('right-rollbacks').children.length)
+
+       if(document.getElementById('right-rollbacks').children.length>2){
+           document.getElementById('legende').style.display="none"
+       } else {
+           document.getElementById('legende').style.display="block"
        }
    });
 
 
 
 
-   $( init );
 
-   function init() {
-       $( ".droppable-area1, .droppable-area2" ).sortable({
-           connectWith: ".connected-sortable",
-           stack: '.connected-sortable ul'
-       }).disableSelection();
-   }
+
+//   $( init );
+//
+//   function init() {
+//       $( ".droppable-area1, .droppable-area2" ).sortable({
+//           connectWith: ".connected-sortable",
+//           stack: '.connected-sortable ul'
+//       }).disableSelection();
+//   }
 
 
 </script>
