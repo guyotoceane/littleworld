@@ -100,27 +100,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="form-block">
-					<span>Etape 2</span>		
-					<div class="form-row">
-						<div class="col-md-12">
-							<p>Choix de la mise en page</p>
-							<div id="choix-mise-en-page">
-								<input type="radio" id="page1" value="page1" name="page" checked="checked"><label for="page1"><img src="images/mep1.PNG" alt="mise en page image a gauche"></label>
-								<input type="radio" id="page2" value="page2" name="page" ><label for="page2"><img src="images/mep2.PNG" alt="mise en page image a gauche"></label>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="form-block">
-					<span>Etape 3</span>
-					<div>
-						<p class="row">Séléctionnez image du pays </p>
-						<p class="row">(seulement si choix de mise en page 2 effectué) :</p>
-						<label for="image-pays" class="B1">Parcourir</label>
-						<input type="file" name="image-pays" id="image-pays" value="parcourir">
-					</div>
-				</div>
+                <div class="row justify-content-between">
+                    <div class="form-block col-5">
+                        <span>Etape 2</span>		
+                        <div class="form-row row">
+                            <div class="col-md-12">
+                                <p>Choix de la mise en page</p>
+                                <div id="choix-mise-en-page">
+                                    <input type="radio" id="page1" value="page1" name="page" checked="checked"><label for="page1"><img src="images/mep1.PNG" alt="mise en page image a gauche"></label>
+                                    <input type="radio" id="page2" value="page2" name="page" ><label for="page2"><img src="images/mep2.PNG" alt="mise en page image a gauche"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-block col-4">
+                        <span>Etape 3</span>
+                        <div class="align-middle">
+                            <p class="row">Séléctionnez image du pays </p>
+                            <p class="row">(seulement si choix de mise en page 2 effectué) :</p>
+                            <label for="image-pays" class="B1">Parcourir</label>
+                            <input type="file" name="image-pays" id="image-pays" value="parcourir">
+                        </div>
+                    </div>
+                </div>
 				<div class="form-row justify-content-center">
 					<button class="B1 mx-3">Aperçu</button>
 					<button class="B1 mx-3 btn-submit-creer-pays" type="submit">Sauvegarder</button>

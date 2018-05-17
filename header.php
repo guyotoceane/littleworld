@@ -9,23 +9,28 @@
             </div>
             <div>
                 <div class="logo">
-                    <img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
+					<a href="index.php">
+						<img aria-level="1" src="images/Logo_Little_World2.png" alt="Logo">
+					</a>
                 </div>
-                <button class="B1">
-                    Inscription
-                </button>
-                <a href="http://localhost/littleworldBack/user/">
-                    <button class="B1">
-                        Connexion
-                    </button>
-                </a>
+
+				<a href="inscription.php">
+					<button class="B1">
+						Inscription
+					</button>
+				</a>
+				<a href="connexion.php">
+					<button class="B1">
+						Connexion
+					</button>
+				</a>
 
             </div>
             <nav class="menu">
                 <ul class="row">
                     <li class="fiche col-md-4"><a href="createFiche.php">Création d'une fiche</a></li>
                     <li class="livre col-md-4"><a href="createLivre.php">Créer un livre</a></li>
-                    <li class="bibliotheque col-md-4"><a href="">Bibliothèque / Sortie</a></li>
+                    <li class="bibliotheque col-md-4"><a href="bibliotheque.php">Bibliothèque / Sortie</a></li>
                 </ul>
             </nav>
         </header>
