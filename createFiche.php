@@ -75,22 +75,7 @@
 								<input type="text" class="form-control" name="fleuve" id="fleuve" placeholder="Seine" required>
 							</div>
 						</div>
-					</div>
-
-					<div class="form-group row">
-						<div class="col-md-4 row">
-							<label for="monument" class="col-md-6">Monument</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="monument" id="monument" placeholder="Notre-Dame" required>
-							</div>
-						</div>
-						<div class="col-md-8 row">
-							<label for="image-monument" class="B1">Parcourir</label>
-							<div class="col-md-2">
-								<input type="file" value="Parcourir" name="image-monument" id="image-monument" required>
-							</div>
-						</div>
-					</div>		
+					</div>	
 					<div class="form-group row">
 						<div class="col-md-12 row">
 							<label for="description" class="col-md-2">Histoire du pays</label>
@@ -117,7 +102,6 @@
                         <span>Etape 3</span>
                         <div class="align-middle">
                             <p class="row">Séléctionnez image du pays </p>
-                            <p class="row">(seulement si choix de mise en page 2 effectué) :</p>
                             <label for="image-pays" class="B1">Parcourir</label>
                             <input type="file" name="image-pays" id="image-pays" value="parcourir">
                         </div>
