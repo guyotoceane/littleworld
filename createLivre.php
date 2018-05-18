@@ -39,6 +39,7 @@
 
 <body>
 <?php include("header.php"); ?>
+
 <section>
 <div class="onglet createLivre">
 	<div class="container-fluid">
@@ -50,7 +51,20 @@
 					<div class="row">
 						<div class="block-fiche px-3 col-md-8">
 							<ul class="connected-sortable d-flex justify-content-around container" id="left-rollbacks">
+                                <?php
 
+                                $liste = $_SESSION['listFiches'];
+
+                                for($i=0; $i<count($liste) ;$i++){
+                                    echo "<li id='".$liste[$i]['idt_lnd']."'>
+                                                <img width='100px' src='./images/fiches_pays/".$liste[$i]['nam_img']."'>
+                                                <p style='text-align: center'>".$liste[$i]['nam_land']."</p>
+                                          </li>";
+                                }
+
+                                ?>
+
+                                <li>&nbsp;</li>
 							</ul>
 						</div>
 					</div>
@@ -65,10 +79,10 @@
 					</div>								
 					<div class="row">
 						<div class="block-btn">
-							<button class="btn-submit B1">
+							<button class="btn-submit B1" id="b1">
 								Aperçu
 							</button>
-							<button class="btn-submit B1">
+							<button class="btn-submit B1" id="b2">
 								Assembler
 							</button>
 						</div>
@@ -87,63 +101,67 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
 
 <script>
+    
+    
+    document.getElementById('b1').addEventListener('click', assembler, false);
+    document.getElementById('b2').addEventListener('click', assembler, false);
+
+    function assembler() {
+
+        console.log(this.id)
+
+        var fiches = [];
+
+        for(let i = 0 ; i<document.getElementById('right-rollbacks').children.length; i++){
+            let tmp = document.getElementById('right-rollbacks').children[i];
 
 
+            if(tmp.id && tmp.id !== "legende" ){
+                let fiche = {}
+                fiche.id = tmp.id;
 
-   $.ajax({
-       // chargement du fichier externe monfichier-ajax.php
-       url      : "http://localhost/littleworldBack/fiche/",
-       cache    : false,
-       type : "GET",
-       error    : function(request, error) { // Info Debuggage si erreur
-           alert("Erreur : responseText: "+request.responseText);
-       },
-       success  : function(data) {
-
-           data = JSON.parse(data);
-
-           console.log(data.length)
+                fiches.push(tmp.id);
 
 
-           for(let i=0; i< data.length; i++){
-               let li = document.createElement('li');
-               console.log(data[i])
+            }
 
-               // li.innerText = data[i].nam_land
+        }
 
-               let img = document.createElement('img');
+        console.log(fiches);
+        envoyer(this.id, fiches)
+    }
 
-               img.setAttribute('src', "./images/fiches_pays/"+data[i].nam_img);
-               img.style.width = '5em'
+    function envoyer(id, infos) {
 
-               let text = document.createElement("p")
+        if(id === "b1"){
+            type = "GET"
+        } else if (id === "b2")  {
+            type = "POST"
+        }
 
-               text.appendChild(document.createTextNode(data[i].nam_land))
+        console.log(infos)
 
-               text.style.textAlign = "center"
 
-               li.appendChild(img);
+        $.ajax({
+            // chargement du fichier externe monfichier-ajax.php
+            url      : "http://localhost/littleworldBack/book/",
+            cache    : false,
+            data : {
+                infos : infos
+            },
+            type : type,
+            dataType : "html",
+            error    : function(request, error) { // Info Debuggage si erreur
+                alert("Erreur : responseText: "+request.responseText);
+            },
+            success  : function(data) {
+                console.log(data);
 
-               li.appendChild(text);
+                console.log('BRAVO !! ')
+            }
 
-               li.id = data[i].idt_lnd
-
-               li.classList.add('draggable-item')
-
-               document.getElementById('left-rollbacks').appendChild(li)
-
-           }
-
-           let li = document.createElement('li');
-           li.appendChild(document.createTextNode(String.fromCharCode(160)));
-           document.getElementById('left-rollbacks').appendChild(li);
-
-           li = document.createElement('li');
-           li.appendChild(document.createTextNode(String.fromCharCode(160)));
-           document.getElementById('right-rollbacks').appendChild(li);
-
-       }
-   });
+        });
+    }
 
    dragula([document.getElementById('left-rollbacks'), document.getElementById('right-rollbacks')]).on('drop', function (el) {
        console.log(document.getElementById('right-rollbacks').children.length)
