@@ -4,7 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="UTF-8">
 		<title>Littleworld</title>
-		<link rel="stylesheet/less" type="text/css" href="less/stylesFiche.less" />
+        <link rel="stylesheet/less" type="text/css" href="less/stylesFiche.less" />
+		<!-- <link rel="stylesheet/less" type="text/css" href="less/stylesFiche2.less" /> -->
 		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
 	</head>
 <body>
