@@ -2,10 +2,88 @@
 @gray: #b5aeab;
 @blueblock : #d9f1fb;
 @bluelabel: #273583;
+@bluesky : #0091cb;
+@tailleImage: 90px;
 
 // première format de fiche en sortie PDF ou EPub
 
 div.accueil {
+    
+    background-image: url("../images/page_dacceuil_fond2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 30px 0 20px 0;
+    
+    div.banniere {
+        
+        padding: 0 20px;
+        
+        div {
+            padding: 20px 0;
+            
+            h1 {
+                font-family: "Segoe Print";
+                font-weight: bold;
+                font-size: 2.5em;
+                margin-bottom: 20px;
+            }
+            
+            p {
+                font-weight: bold;
+                font-weight: 1.1em;
+            }
+
+            img {
+                width: 250px;
+                display: flex;
+                margin: auto;
+            }        
+            
+            col-md-8 {
+                padding: 0 30px;
+            }
+        }
+    }
+    
+    div.etapes {
+        
+        background-color: #0091cb;
+        text-align: center;
+        
+        span {
+            border: solid 3px white;
+            border-radius: 50%;
+            margin: auto;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        p {
+            color: white;
+        }
+                
+        img {
+            width: auto;
+            height: auto;
+            max-width: @tailleImage;
+            max-height: @tailleImage;
+        }
+        
+    }
+    
+    div.button {
+        
+        button {
+            background-color: #0091cb;
+            color: white;
+        }
+        
+    }
     
 }
 
