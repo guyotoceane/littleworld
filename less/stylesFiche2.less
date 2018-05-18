@@ -1,0 +1,58 @@
+@yellowblock : #fff8b8;
+@gray: #b5aeab;
+@blueblock : #d9f1fb;
+@bluelabel: #273583;
+
+.fiche1 {
+	width: 297mm;
+	height: 420mm;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	border: solid 1px black;
+
+	h1 {
+		position: absolute;
+		top: 25mm;
+		width: 100%;
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        color: black;
+        font-family: "impact", Arial;
+        letter-spacing: .2rem;
+	}
+
+	h1 + .row {
+		top: 60mm;
+		position: absolute;
+
+		div:first-child {
+			right: 0;
+			display: inline-block;
+			width: 120mm;
+			height: 120mm;
+			position: absolute;
+
+		}
+
+		div:last-child {
+			display: inline-block;
+			width: 140mm;
+			height: 120mm;
+			right: 10mm;
+			position: absolute;
+
+		}
+	}
+
+	.row:nth-child(3){
+		top: 130mm;
+		position: absolute;
+	}
+
+	.row:last-child{
+		top: 150mm;
+		position: absolute;
+	}
+}
