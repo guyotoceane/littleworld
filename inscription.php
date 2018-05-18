@@ -13,7 +13,7 @@
 			<div class="container">
 				<div class="inscription">
 					<div class="row">
-						<form class="needs-validation form-user" novalidate style="width:100%;">
+						<form class="needs-validation form-user" method="post" action="http://localhost/littleworldBack/user/new" novalidate style="width:100%;">
 							<div class="form-block">
 								<div class="text-center tittle-inscription">
 									<h3> INSCRIPTION </h3>
@@ -24,7 +24,7 @@
 										<label for="nom">Nom</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="nom" required>
+										<input type="text" class="form-control " name="name" id="nom" required>
 									</div>
 								</div>
 								
@@ -33,7 +33,7 @@
 										<label for="prenom">Prénom</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="prenom" required>
+										<input type="text" class="form-control " name="lName" id="prenom" required>
 									</div>
 								</div>
 
@@ -42,7 +42,7 @@
 										<label for="mail">E-mail</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="text" class="form-control " id="mail" required>
+										<input type="text" class="form-control " name="mail" id="mail" required>
 									</div>
 								</div>
 								
@@ -51,7 +51,7 @@
 										<label for="password">Mot de passe</label>
 									</div>
 									<div class="col-md-8 col-sm-12">
-										<input type="password" class="form-control " id="password" required>
+										<input type="password" class="form-control " name="pwd" id="password" required>
 									</div>
 								</div>
 								

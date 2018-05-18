@@ -70,6 +70,9 @@
 					</div>
                     <h2 class="label">Assemblage des fiches : </h2>
 					<div class="row">
+                        <div class="col-md-12">
+                            <input style="margin-left:16%; margin-bottom:2%;" type="text" id="name_book" placeholder="Titre du livre">
+                        </div>
 						<div class="block-fiche px-3 col-md-8">
 							<ul  class="connected-sortable d-flex justify-content-around container" id="right-rollbacks">
                                 <li id="legende">Glissez les fiches que vous voulez assenbler</li>
@@ -139,7 +142,7 @@
             type = "POST"
         }
 
-        console.log(infos)
+        console.log(infos);
 
 
         $.ajax({
@@ -147,7 +150,8 @@
             url      : "http://localhost/littleworldBack/book/",
             cache    : false,
             data : {
-                infos : infos
+                infos : infos,
+                title : document.getElementById('name_book').value
             },
             type : type,
             dataType : "html",

@@ -102,8 +102,8 @@
                         <span>Etape 3</span>
                         <div class="align-middle">
                             <p class="row">Séléctionnez image du pays </p>
-                            <label for="image-pays" class="B1">Parcourir</label>
-                            <input type="file" name="image-pays" id="image-pays" value="parcourir">
+                            <label for="image-monument" class="B1">Parcourir</label>
+                            <input type="file" value="Parcourir" name="image-monument" id="image-monument" required>
                         </div>
                     </div>
                 </div>

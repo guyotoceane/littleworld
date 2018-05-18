@@ -6,7 +6,14 @@
 		<title>Littleworld</title>
 		<link rel="stylesheet/less" type="text/css" href="less/styles.less" />
 		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css" />
-	</head>
+
+        <style>
+            li{
+                list-style: none;
+            }
+        </style>
+
+    </head>
 <body>
 <?php include("header.php"); ?>
 <section>
@@ -20,11 +27,20 @@
 					<div class="row">
 						<div class="block-fiche px-3 col-md-8"> 
 							<ul class="d-flex justify-content-around">
-								<li><img src="images/page1.PNG"></li>
-								<li><img src="images/page1.PNG"></li>
-								<li><img src="images/page1.PNG"></li>
-								<li><img src="images/page1.PNG"></li>
-								<li><img src="images/page1.PNG"></li>
+                                <?php
+
+                                $liste = $_SESSION['listFiches'];
+
+                                for($i=0; $i<count($liste) ;$i++){
+                                    echo "<li id='".$liste[$i]['idt_lnd']."'>
+                                                <a href='http://localhost/littleworldBack/library/fiche/".$liste[$i]['idt_lnd']."'><img width='100px' src='./images/fiches_pays/".$liste[$i]['nam_img']."'></a>
+                                                <p style='text-align: center'>".$liste[$i]['nam_land']."</p>
+                                          </li>";
+                                }
+
+                                ?>
+
+                                <li>&nbsp;</li>
 							</ul>
 						</div>
 					</div>
